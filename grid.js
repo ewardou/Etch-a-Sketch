@@ -21,8 +21,11 @@ fillSquare();
 function fillSquare(){
     const squares=document.querySelectorAll(".square")
     squares.forEach(square=>{
-    square.addEventListener("mouseover",()=>square.style.backgroundColor="yellow")
+    square.addEventListener("mouseover",()=>square.style.backgroundColor=randomColor())
     })
+}
+function randomColor(){
+    return `rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`
 }
 
 const btn=document.querySelector("button");

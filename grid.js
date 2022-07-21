@@ -12,3 +12,8 @@ for (let i=1;i<=dimension;i++){
     div.style.height=squareDimension;
     grid.appendChild(div);
 }
+
+const squares=document.querySelectorAll(".square")
+squares.forEach(square=>{
+    square.addEventListener("mouseover",()=>square.style.backgroundColor="yellow")
+})

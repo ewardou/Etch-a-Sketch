@@ -21,7 +21,12 @@ fillSquare();
 function fillSquare(){
     const squares=document.querySelectorAll(".square")
     squares.forEach(square=>{
-    square.addEventListener("mouseover",()=>square.style.backgroundColor="black")
+    square.addEventListener("mouseover",(event)=>{
+        if (event.shiftKey){
+            return
+        };
+        square.style.backgroundColor="black";
+        })
     })
 }
 
@@ -47,7 +52,12 @@ function randomColor(){
 function fillSquareRandom(){
     const squares=document.querySelectorAll(".square")
     squares.forEach(square=>{
-    square.addEventListener("mouseover",()=>square.style.backgroundColor=randomColor())
+    square.addEventListener("mouseover",(event)=>{
+        if (event.shiftKey){
+            return
+        };
+        square.style.backgroundColor=randomColor();
+        })
     })
 }
 

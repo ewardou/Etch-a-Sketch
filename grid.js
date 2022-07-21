@@ -50,8 +50,19 @@ function fillSquareRandom(){
     square.addEventListener("mouseover",()=>square.style.backgroundColor=randomColor())
     })
 }
+
 const random=document.querySelector(".random");
 random.addEventListener("click",fillSquareRandom);
 
 const black=document.querySelector(".black");
 black.addEventListener("click",fillSquare);
+
+const erase=document.querySelector(".erase");
+
+function fillSquareErase(){
+    const squares=document.querySelectorAll(".square")
+    squares.forEach(square=>{
+    square.addEventListener("mouseover",()=>square.style.backgroundColor="white")
+    })
+}
+erase.addEventListener("click",fillSquareErase);

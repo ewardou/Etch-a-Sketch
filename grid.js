@@ -1,6 +1,7 @@
 const grid=document.querySelector(".grid");
 const gridDimension=grid.getBoundingClientRect();
 const gridWidth=gridDimension.width;
+const frame=document.querySelector(".frame");
 let base=8
 
 function createGrid(base,container){
@@ -32,10 +33,10 @@ btn.addEventListener("click",()=>{
         return false;
     }
     let previousGrid=document.querySelector(".grid");
-    document.body.removeChild(previousGrid);
+    frame.removeChild(previousGrid);
     let newGrid=document.createElement("div");
     newGrid.setAttribute("class","grid");
-    document.body.appendChild(newGrid);
+    frame.appendChild(newGrid);
     createGrid(newBase,newGrid);
     fillSquare();
 })

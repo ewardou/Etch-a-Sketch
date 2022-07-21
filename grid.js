@@ -31,7 +31,7 @@ btn.addEventListener("click",()=>{
         alert ("Please input a number up to 100.");
         return false;
     }
-    let previousGrid=document.querySelector("div");
+    let previousGrid=document.querySelector(".grid");
     document.body.removeChild(previousGrid);
     let newGrid=document.createElement("div");
     newGrid.setAttribute("class","grid");

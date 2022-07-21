@@ -14,3 +14,20 @@
     flex-shrink: 0;
     box-sizing: border-box;
 }
+.frame{
+    background-color: gray;
+    padding:10px;
+    margin:0 auto;
+}
+body{
+    display:flex;
+    flex-direction: column;
+}
+.frame-header{
+    background-color:lightgray;
+    padding: 10px;
+    width:700px;
+    margin:0 auto;
+    display:flex;
+    justify-content: center;
+}
